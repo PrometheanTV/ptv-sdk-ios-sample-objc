@@ -27,13 +27,16 @@ static NSString * const SampleVideoUrl = @"https://bitdash-a.akamaihd.net/conten
   NSURL *videoUrl = [NSURL URLWithString:SampleVideoUrl];
   AVPlayerItem *item = [[AVPlayerItem alloc] initWithURL:videoUrl];
   
+  // Setup player.
   player = [AVPlayer playerWithPlayerItem:item];
  
+  // Setup player view controller.
   playerViewController = [AVPlayerViewController new];
   playerViewController.player = player;
   playerViewController.showsPlaybackControls = YES;
   playerViewController.view.frame = self.view.frame;
   
+  // Add player view controller to main view.
   [self addChildViewController:playerViewController];
   [self.view addSubview:playerViewController.view];
   
@@ -59,8 +62,8 @@ static NSString * const SampleVideoUrl = @"https://bitdash-a.akamaihd.net/conten
                                     streamId:SampleStreamId];
   
   // Add overlays to player view.
-  [PTVSDK addOverlaysToPlayerViewWithPlayerView:playerViewController.view
-                                    overlayData: overlayData];
+  [PTVSDK addOverlaysToPlayerViewWithPlayerView:self.view
+                                    overlayData:overlayData];
 }
 
 
