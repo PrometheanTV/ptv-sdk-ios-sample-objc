@@ -1,0 +1,16 @@
+PODS:
+  - PTVSDK (0.10.0)
+
+DEPENDENCIES:
+  - PTVSDK (from `~/Development/ptv/ptv-sdk-ios`)
+
+EXTERNAL SOURCES:
+  PTVSDK:
+    :path: "~/Development/ptv/ptv-sdk-ios"
+
+SPEC CHECKSUMS:
+  PTVSDK: a03dd95b29b713fc930176c50b9664cadba6233a
+
+PODFILE CHECKSUM: 1ddf1befbc5e2c1295b1e1719c7524a789586cef
+
+COCOAPODS: 1.7.5
